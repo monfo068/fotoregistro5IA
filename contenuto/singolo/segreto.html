@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifica Password</title>
+    <style>
+        #links {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Verifica la tua password</h2>
+
+    <input type="password" id="password" placeholder="Inserisci la password">
+    <button onclick="verificaPassword()">Verifica</button>
+
+    <div id="links">
+        <p><a href="https://it.wikipedia.org/wiki/Leonardo_(supercomputer)" target="_blank">Impara qualcosa</a></p>
+        <p><a href="https://bitcoin.org/bitcoin.pdf" target="_blank">GLS</a></p>
+    </div>
+
+    <script>
+        function verificaPassword() {
+            var password = document.getElementById('password').value;
+            if (password === 'p@tr1ck') {
+                document.getElementById('links').style.display = 'block';
+            } else {
+                alert('Password errata!');
+            }
+        }
+    </script>
+
+</body>
+</html>
